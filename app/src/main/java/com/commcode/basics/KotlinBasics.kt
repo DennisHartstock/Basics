@@ -6,7 +6,7 @@ fun main() {
     //mutable String
     var name = "Vita"
     name = "Dennis"
-    print("$greetings I'm $name")
+    println("$greetings I'm $name")
 
     //TODO: learn basic types
 
@@ -23,4 +23,18 @@ fun main() {
     val float: Float = 125.125f
     //type Double (64 bits)
     val double = 1223545.4656454
+
+    //type Boolean (true or false)
+    var isSunny = true
+    isSunny = false
+
+    //type Character
+    var letterChar = 'A'
+    var digitChar = '1'
+
+    //type Strings
+    val myString = "Summer"
+    val firstLetterChar = myString[0]
+    val lastLetterChar = myString[myString.length - 1]
+    print("First letter: $firstLetterChar\nLast letter: $lastLetterChar")
 }
