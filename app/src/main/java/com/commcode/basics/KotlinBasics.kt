@@ -36,10 +36,10 @@ fun main() {
     val myString = "Summer"
     val firstLetterChar = myString[0]
     val lastLetterChar = myString[myString.length - 1]
-    print("First letter: $firstLetterChar\nLast letter: $lastLetterChar")
+    println("First letter: $firstLetterChar\nLast letter: $lastLetterChar")
 
     //Arithmetic operators
-    var result = 10 % 3
+    var result = 14 % 3
     println(result)
 
     val a = 3.0
@@ -48,4 +48,12 @@ fun main() {
     println(result)
     val resultToDouble: Double = a / b
     println(resultToDouble)
+
+    //Comparison operators
+    val isEqual = 2 == 2
+    println("isEqual is $isEqual")
+    val isNotEqual = 2 != 2
+    println("isNotEqual is $isNotEqual")
+
+    println("Is 4 greater than 3 ${4 >= 3}")
 }
