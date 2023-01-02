@@ -37,4 +37,15 @@ fun main() {
     val firstLetterChar = myString[0]
     val lastLetterChar = myString[myString.length - 1]
     print("First letter: $firstLetterChar\nLast letter: $lastLetterChar")
+
+    //Arithmetic operators
+    var result = 10 % 3
+    println(result)
+
+    val a = 3.0
+    val b = 2
+    result = (a / b).toInt()
+    println(result)
+    val resultToDouble: Double = a / b
+    println(resultToDouble)
 }
