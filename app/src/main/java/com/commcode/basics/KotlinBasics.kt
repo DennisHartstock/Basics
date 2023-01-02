@@ -56,4 +56,17 @@ fun main() {
     println("isNotEqual is $isNotEqual")
 
     println("Is 4 greater than 3 ${4 >= 3}")
+
+    //Assignment operators
+    var number = 1
+    number += 2
+    println("$number")
+    number *= 4
+    println("$number")
+    number %= 2
+    println("$number")
+
+    //Increment and decrement operators
+    println("${number++}")
+    println("${--number}")
 }
