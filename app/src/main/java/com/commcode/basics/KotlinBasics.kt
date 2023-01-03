@@ -110,4 +110,12 @@ fun main() {
         !in 0..100 -> println("Die!")
         else -> println("You're already dead!")
     }
+
+    val x: Any = 313245.23135f
+    when (x) {
+        is Int -> println("$x is an Int")
+        is Double -> println("$x is a Double")
+        is String -> println("$x is a String")
+        else -> println("$x is none of above")
+    }
 }
