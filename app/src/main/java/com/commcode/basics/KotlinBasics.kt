@@ -71,18 +71,18 @@ fun main() {
     println("${--number}")
 
     //if Statements
-    val age = (1..110).random()
+    val age = (0..110).random()
     println("age is $age")
 
     if (age > 100) {
         println("Die!")
     } else if (age > 21) {
-        println("Work by McDonald's!")
+        println("Work in McDonald's!")
     } else if (age > 16) {
         println("Go to the university!")
     } else if (age > 6) {
         println("Go to the school!")
-    } else if (age < 3) {
+    } else if (age > 3) {
         println("Go to the kindergarten!")
     }
 
@@ -99,5 +99,15 @@ fun main() {
         }
         4 -> println("It's winter")
         else -> println("Invalid season")
+    }
+
+    when (age) {
+        0, 1, 2 -> println("Stay at home!")
+        in 3..6 -> println("Go to the kindergarten!")
+        in 6..16 -> println("Go to the school!")
+        in 16..21 -> println("Go to the university!")
+        in 21..100 -> println("Work in McDonald's!")
+        !in 0..100 -> println("Die!")
+        else -> println("You're already dead!")
     }
 }
