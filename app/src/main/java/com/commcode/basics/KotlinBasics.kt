@@ -72,7 +72,7 @@ fun main() {
 
     //if Statements
     val age = (1..110).random()
-    println(age)
+    println("age is $age")
 
     if (age > 100) {
         println("Die!")
@@ -84,5 +84,20 @@ fun main() {
         println("Go to the school!")
     } else if (age < 3) {
         println("Go to the kindergarten!")
+    }
+
+    //when
+    val season = (1..6).random()
+    println("season is $season")
+
+    when (season) {
+        1 -> println("It's spring")
+        2 -> println("It's summer")
+        3 -> {
+            println("It's fall")
+            println("It's autumn")
+        }
+        4 -> println("It's winter")
+        else -> println("Invalid season")
     }
 }
