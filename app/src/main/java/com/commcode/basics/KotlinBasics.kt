@@ -69,4 +69,20 @@ fun main() {
     //Increment and decrement operators
     println("${number++}")
     println("${--number}")
+
+    //if Statements
+    val age = (1..110).random()
+    println(age)
+
+    if (age > 100) {
+        println("Die!")
+    } else if (age > 21) {
+        println("Work by McDonald's!")
+    } else if (age > 16) {
+        println("Go to the university!")
+    } else if (age > 6) {
+        println("Go to the school!")
+    } else if (age < 3) {
+        println("Go to the kindergarten!")
+    }
 }
