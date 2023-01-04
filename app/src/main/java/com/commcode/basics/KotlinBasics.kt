@@ -133,4 +133,15 @@ fun main() {
         y++
     } while (y <= 10)
     println("\nDo while loop is done")
+
+    //another one while loop
+    var feltTemp = "cold"
+    var roomTemp = 10
+    while (feltTemp == "cold") {
+        roomTemp++
+        if (roomTemp >= 20) {
+            feltTemp = "comfy"
+            println("It's comfy now")
+        }
+    }
 }
