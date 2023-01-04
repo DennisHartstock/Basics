@@ -126,4 +126,11 @@ fun main() {
         y /= 2
     }
     println("\nWhile loop is done")
+
+    //do while
+    do {
+        print("$y ")
+        y++
+    } while (y <= 10)
+    println("\nDo while loop is done")
 }
