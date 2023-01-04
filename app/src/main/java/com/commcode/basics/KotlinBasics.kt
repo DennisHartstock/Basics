@@ -111,11 +111,19 @@ fun main() {
         else -> println("You're already dead!")
     }
 
-    val x: Any = 313245.23135f
+    val x: Any = 313245.22f
     when (x) {
         is Int -> println("$x is an Int")
         is Double -> println("$x is a Double")
         is String -> println("$x is a String")
         else -> println("$x is none of above")
     }
+
+    //while loop
+    var y = 100
+    while (y > 0) {
+        print("$y ")
+        y /= 2
+    }
+    println("\nWhile loop is done")
 }
