@@ -87,7 +87,7 @@ fun main() {
     }
 
     //when
-    val season = (1..6).random()
+    val season = (1..5).random()
     println("season is $season")
 
     when (season) {
@@ -103,10 +103,10 @@ fun main() {
 
     when (age) {
         0, 1, 2 -> println("Stay at home!")
-        in 3..6 -> println("Go to the kindergarten!")
-        in 6..16 -> println("Go to the school!")
-        in 16..21 -> println("Go to the university!")
-        in 21..100 -> println("Work in McDonald's!")
+        in 3 until 6 -> println("Go to the kindergarten!")
+        in 6 until 16 -> println("Go to the school!")
+        in 16 until 21 -> println("Go to the university!")
+        in 21 until 100 -> println("Work in McDonald's!")
         !in 0..100 -> println("Die!")
         else -> println("You're already dead!")
     }
@@ -144,4 +144,20 @@ fun main() {
             println("It's comfy now")
         }
     }
+
+    //for loops
+    for (i in 1..10) {
+        print("$i ")
+    }
+    println()
+
+    for (i in 1 until 10) {
+        print("$i ")
+    }
+    println()
+
+    for (i in 12 downTo 1 step 3) {
+        print("$i ")
+    }
+    println()
 }
