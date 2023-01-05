@@ -160,4 +160,21 @@ fun main() {
         print("$i ")
     }
     println()
+
+    //break and continue
+    for (i in 1 until 20) {
+        if (i / 2 == 5) {
+            break
+        }
+        print("$i ")
+    }
+    println("For loop is done")
+
+    for (i in 1 until 20) {
+        if (i / 2 == 5) {
+            continue
+        }
+        print("$i ")
+    }
+    println("For loop is done")
 }
