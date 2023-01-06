@@ -177,4 +177,14 @@ fun main() {
         print("$i ")
     }
     println("For loop is done")
+
+    //nullables
+    val myName = "Dennis"
+    //myName = null -> Compilation error
+    val lengthOfMyName = myName.length
+    println("Length of myName is $lengthOfMyName")
+
+    var nullableName: String? = "Dennis"
+    nullableName = null
+    println("Length of nullableName is ${nullableName?.length}")
 }
