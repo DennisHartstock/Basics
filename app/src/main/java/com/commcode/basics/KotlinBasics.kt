@@ -1,44 +1,44 @@
 package com.commcode.basics
 
 fun main() {
-    //immutable String
+    // immutable String
     val greetings = "Hello, world!"
-    //mutable String
+    // mutable String
     var name = "Vita"
     name = "Dennis"
     println("$greetings I'm $name")
 
-    //TODO: learn basic types
+    // TODO: learn basic types
 
-    //type Byte (8 bits)
+    // type Byte (8 bits)
     val byte: Byte = 127
-    //type Short (16 bits)
+    // type Short (16 bits)
     val short: Short = 32_767
-    //type Int (32 bits)
+    // type Int (32 bits)
     val int = 2_147_483_647
-    //type Long (64 bits)
+    // type Long (64 bits)
     val long: Long = 9_223_372_036_854_775_807
 
-    //type Float (32 bits)
+    // type Float (32 bits)
     val float: Float = 125.125f
-    //type Double (64 bits)
+    // type Double (64 bits)
     val double = 1223545.4656454
 
-    //type Boolean (true or false)
+    // type Boolean (true or false)
     var isSunny = true
     isSunny = false
 
-    //type Character
+    // type Character
     var letterChar = 'A'
     var digitChar = '1'
 
-    //type Strings
+    // type Strings
     val myString = "Summer"
     val firstLetterChar = myString[0]
     val lastLetterChar = myString[myString.length - 1]
     println("First letter: $firstLetterChar\nLast letter: $lastLetterChar")
 
-    //Arithmetic operators
+    // Arithmetic operators
     var result = 14 % 3
     println(result)
 
@@ -49,7 +49,7 @@ fun main() {
     val resultToDouble: Double = a / b
     println(resultToDouble)
 
-    //Comparison operators
+    // Comparison operators
     val isEqual = 2 == 2
     println("isEqual is $isEqual")
     val isNotEqual = 2 != 2
@@ -57,7 +57,7 @@ fun main() {
 
     println("Is 4 greater than 3 ${4 >= 3}")
 
-    //Assignment operators
+    // Assignment operators
     var number = 1
     number += 2
     println("$number")
@@ -66,11 +66,11 @@ fun main() {
     number %= 2
     println("$number")
 
-    //Increment and decrement operators
+    // Increment and decrement operators
     println("${number++}")
     println("${--number}")
 
-    //if Statements
+    // if Statements
     val age = (0..110).random()
     println("age is $age")
 
@@ -86,7 +86,7 @@ fun main() {
         println("Go to the kindergarten!")
     }
 
-    //when
+    // when
     val season = (1..5).random()
     println("season is $season")
 
@@ -119,7 +119,7 @@ fun main() {
         else -> println("$x is none of above")
     }
 
-    //while loop
+    // while loop
     var y = 100
     while (y > 0) {
         print("$y ")
@@ -127,14 +127,14 @@ fun main() {
     }
     println("\nWhile loop is done")
 
-    //do while
+    // do while
     do {
         print("$y ")
         y++
     } while (y <= 10)
     println("\nDo while loop is done")
 
-    //another one while loop
+    // another one while loop
     var feltTemp = "cold"
     var roomTemp = 10
     while (feltTemp == "cold") {
@@ -145,7 +145,7 @@ fun main() {
         }
     }
 
-    //for loops
+    // for loops
     for (i in 1..10) {
         print("$i ")
     }
@@ -161,7 +161,7 @@ fun main() {
     }
     println()
 
-    //break and continue
+    // break and continue
     for (i in 1 until 20) {
         if (i / 2 == 5) {
             break
@@ -178,13 +178,22 @@ fun main() {
     }
     println("For loop is done")
 
-    //nullables
-    val myName = "Dennis"
-    //myName = null -> Compilation error
+    // nullables
+    var myName = "Dennis"
+    // myName = null -> Compilation error
     val lengthOfMyName = myName.length
     println("Length of myName is $lengthOfMyName")
 
     var nullableName: String? = "Dennis"
-    nullableName = null
+    // nullableName = null
     println("Length of nullableName is ${nullableName?.length}")
+
+    // Elvis operator
+    myName = nullableName ?: "Guest"
+    println("myName is $myName")
+
+    println("nullableName to lower case is ${nullableName!!.lowercase()}")
+
+    // You can perform a chain safe calls:
+    // var childAge: Int? = person?.child?.age :? 0
 }
