@@ -196,4 +196,15 @@ fun main() {
 
     // You can perform a chain safe calls:
     // var childAge: Int? = person?.child?.age :? 0
+
+    myFunction(5)
+}
+
+// parameter and variables
+
+// this is a parameter
+fun myFunction(a: Int) {
+    //this is a variable
+    val b = a
+    println("b is $b")
 }
