@@ -19,6 +19,20 @@ fun main() {
     for (fruit in fruits) {
         println(fruit.name)
     }
+
+    // Lists
+    val months = listOf("January", "February", "March", "April", "Mai", "June")
+    println(months)
+
+    val mutableMonths = months.toMutableList()
+    val otherMoths = listOf("Juli", "August", "September", "October", "November", "December")
+    mutableMonths.addAll(otherMoths)
+    println(mutableMonths)
+
+    mutableMonths.add(5, "John")
+    println(mutableMonths)
+    mutableMonths.removeAt(5)
+    println(mutableMonths)
 }
 
 data class Fruit(val name: String, val price: Double)
