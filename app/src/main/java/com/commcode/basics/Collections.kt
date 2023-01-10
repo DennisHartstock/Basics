@@ -33,6 +33,15 @@ fun main() {
     println(mutableMonths)
     mutableMonths.removeAt(5)
     println(mutableMonths)
+
+    // Sets
+    val fruitsSet = setOf("Apple", "Orange", "Grape", "Mango", "Apple")
+    println(fruitsSet.size)
+    println(fruitsSet)
+
+    val fruitsMutableSet = fruitsSet.toMutableSet()
+    fruitsMutableSet.add("Melon")
+    println(fruitsMutableSet.elementAt(3))
 }
 
 data class Fruit(val name: String, val price: Double)
