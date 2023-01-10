@@ -42,6 +42,28 @@ fun main() {
     val fruitsMutableSet = fruitsSet.toMutableSet()
     fruitsMutableSet.add("Melon")
     println(fruitsMutableSet.elementAt(3))
+
+    // Maps
+    val days = mapOf(1 to "Monday", 2 to "Tuesday", 3 to "Wednesday")
+    println(days[1])
+
+    for (key in days.keys) {
+        print("$key is to ${days[key]}, ")
+    }
+
+    val daysMutableMap = days.toMutableMap()
+    daysMutableMap[4] = "Thursday"
+    daysMutableMap[5] = "Friday"
+    daysMutableMap[6] = "Saturday"
+    daysMutableMap[7] = "Sunday"
+    println(daysMutableMap)
+
+    val fruitsMap = mapOf(
+        "Premium" to Fruit("Apple", 4.8),
+        "Standard" to Fruit("Orange", 5.9),
+        "Basic" to Fruit("Melon", 10.5)
+    )
+    println("\n${fruitsMap.toSortedMap()}")
 }
 
 data class Fruit(val name: String, val price: Double)
