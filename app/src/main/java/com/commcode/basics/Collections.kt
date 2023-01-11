@@ -64,6 +64,20 @@ fun main() {
         "Basic" to Fruit("Melon", 10.5)
     )
     println("\n${fruitsMap.toSortedMap()}")
+
+    // Lambdas
+//    val sum = sum(5, 8)
+//    println(sum)
+
+//    val sum: (Int, Int) -> Int = {a: Int , b: Int -> a + b}
+//    println(sum(2,4))
+
+    val sum = { a: Int, b: Int -> println(a + b) }
+    sum(5, 6)
 }
+
+//fun sum(a: Int, b: Int): Int {
+//    return a + b
+//}
 
 data class Fruit(val name: String, val price: Double)
