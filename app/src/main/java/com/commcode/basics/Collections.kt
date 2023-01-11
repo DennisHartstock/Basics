@@ -74,6 +74,38 @@ fun main() {
 
     val sum = { a: Int, b: Int -> println(a + b) }
     sum(5, 6)
+
+//    println(OuterClass().name)
+    println(OuterClass.NestedClass().description)
+    OuterClass.NestedClass().printInfo()
+
+    println(OuterClass().InnerClass().description)
+    OuterClass().InnerClass().printInfo()
+}
+
+// Nested and inner classes
+class OuterClass {
+    private val name = "John"
+
+    inner class InnerClass {
+        val description = "Code inside inner class"
+        private var id = 100
+
+        fun printInfo() {
+            println("Name is $name")
+            println("Id is $id")
+        }
+    }
+
+    class NestedClass {
+        val description = "Code inside nested class"
+        private var id = 100
+
+        fun printInfo() {
+//            println("Name is $name")
+            println("Id is $id")
+        }
+    }
 }
 
 //fun sum(a: Int, b: Int): Int {
